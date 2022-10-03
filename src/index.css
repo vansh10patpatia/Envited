@@ -115,15 +115,9 @@ code {
     line-height: 16px;
   }
   .image-container img{
-    width: 60%;
-  }
-}
-@media only screen and (max-width: 600) {
-  .image-container img{
     width: 90%;
   }
 }
-
 
 /* Event Page Css */
 
@@ -183,7 +177,7 @@ code {
 /* Create Event */
 
 .card-image img{
-  width: 500px;
+  width: 34vw;
 }
 
 .create-event-wrapper{
@@ -193,6 +187,7 @@ code {
 
 .create-card{
   display: flex;
+  align-items: center;
   flex-direction: row;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -223,11 +218,97 @@ code {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 50%;
+  width: 95%;
 }
 
 .input-container label{
   font-size: 0.75rem;
   color: #240D57;
   font-weight: 300;
+}
+.event-image-cont img{
+  width: 30vw;
+}
+@media (max-width:1000px) {
+  .create-card{
+    flex-direction: column-reverse;
+  }
+  .create-card{
+    width: 80%;
+    /* text-align: ; */
+  }
+  .card-image img{
+    width: 60vw;
+  }
+  .event-page-container{
+    flex-direction: column-reverse;
+  }
+  .event-image-cont img{
+    width: 100%;
+  }
+  .event-page-container{
+    margin-left: 0;margin-right: 0;
+  }
+
+}
+.event-page-container-wrap{
+  width: 70%;margin: 0 auto;
+  display: flex;margin-top: 9rem;
+  justify-content: space-between; align-items: flex-start; height: 100vh;
+}
+.event-page-container-details-card{
+  display: flex; align-items: center;
+  width: 400px; position: relative;
+}
+.event-page-container-details-card-text h1{
+  font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+margin: 0;
+padding: 0;
+color: #240D57;
+}
+.event-page-container-details-card-text{
+  margin-left: 1rem;
+}
+.event-page-container-details-card-text p{
+  font-weight: 400;
+font-size: 18px;
+margin: 0;
+line-height: 21px;
+/* identical to box height */
+
+padding: 0;
+color: #4F4F4F;
+}
+.event-page-container-details-card-arrow{
+  margin-left: 1.5rem;position: absolute;right: 0;
+}
+@media (max-width:1200px) {
+  .event-page-container-wrap{
+    width: 85%;
+  }
+}
+@media (max-width:1000px) {
+  .event-page-container-wrap{
+    flex-direction: column-reverse;
+    justify-content: center;margin-top: 1rem;
+  }
+}
+@media (max-width:600px){
+  .event-page-container-wrap{
+    width: 100%;height: 400px;
+  }
+  .event-page-container-img img{
+    width: 100vw;
+  }
+  .event-page-container-details{
+    padding: 0 2rem;
+  }
+  .event-page-container-details-card{
+    width: 370px;transform: scale(0.85);
+  }
+ 
 }

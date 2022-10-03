@@ -1,58 +1,53 @@
-import React from 'react';
+import React from "react";
 import Calendar from "../../assets/images/calendar.svg";
 import Location from "../../assets/images/location.svg";
 import Cake from "../../assets/images/Cake.svg";
 import Arrow from "../../assets/images/arrow.svg";
 
-import { useLocation } from 'react-router-dom';
-import moment from 'moment/moment';
+import { useLocation } from "react-router-dom";
+import moment from "moment/moment";
 
 const Event = () => {
-    const {state} = useLocation();
-    console.log(state);
+  const { state } = useLocation();
+  console.log(state);
   return (
     <>
-        <div className="event-page-container">
-            <div className="event-text-cont">
-                <div className="text-details">
-                    <h2>{state?.eventName ? state?.eventName : 'Birthday Bash'}</h2>
-                    <p>Hosted by <b>{state?.eventHost ? state?.eventHost : 'Elysia'}</b></p>
-                    <div className="event-details-cont">
-                        <div className="event-details">
-                            <img src={Calendar} />
-                            <div className="sub-info">
-                                <p>
-                                    <span>{state?.startDate ? moment(state?.startDate).format("LL") :('18 August 6:00PM')}</span><br />
-                                    <span className="sub-detail-info">to {state?.endDate ? moment(state?.endDate).format("LL") :(<b>19 August 6:00PM</b>)} UTC +10</span>
-                                </p>
-                            </div>
-                            <div className="arrow-img">
-                                <img src={Arrow} />
-                            </div>
-                        </div>
-                        <div className="event-details">
-                            <img src={Location} />
-                            <div className="sub-info">
-                                <p>
-                                    <span>Street name</span>
-                                    <br />Suburb, State, Postcode
-                                </p>
-                            </div>
-                            <div className="arrow-img">
-                                <img src={Arrow} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      
+      <div className="event-page-container-wrap">
+        <div className="event-page-container-details">
+          <h1>Birthday Bash</h1>
+          <p>Hosted by Elysia</p>
+          <div className="event-page-container-details-card">
+            <div className="event-page-container-details-card-img">
+              <img src={Calendar} />
             </div>
-            <div className="event-image-cont">
-                <div>
-                    <img src={state?.image ? state.image : Cake} />
-                </div>
+            <div className="event-page-container-details-card-text">
+              <h1>{state?.startDate ? moment(state?.startDate).format("LL") :('18 August 6:00PM')}</h1>
+              <p>to {state?.endDate ? moment(state?.endDate).format("LL") :(<b>19 August 6:00PM</b>)} UTC +10</p>
             </div>
+            <div className="event-page-container-details-card-arrow">
+              <img src={Arrow} alt="" />
+            </div>
+          </div>
+          <div className="event-page-container-details-card">
+            <div className="event-page-container-details-card-img">
+              <img src={Location} />
+            </div>
+            <div className="event-page-container-details-card-text">
+              <h1>Street name</h1>
+              <p>{state?.location ? state?.location : 'Suburb, State, Postcode'}</p>
+            </div>
+            <div className="event-page-container-details-card-arrow">
+              <img src={Arrow} alt="" />
+            </div>
+          </div>
         </div>
+        <div className="event-page-container-img">
+          <img src={state?.image ? state.image : Cake} alt="" />
+        </div>
+      </div>
     </>
-)
-}
+  );
+};
 
 export default Event;
