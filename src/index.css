@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  font-family: 'Helvetica';
+  font-style: normal;
+}
+
+
+.home-page-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 7%;
+  margin-right: 7%;
+  /* background-color: #DDDDDD; */
+}
+
+.text-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: end;
+  flex: 0.5;
+}
+
+.text-container  h2{
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  text-align: right;
+}
+
+.text-container  p{
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+}
+
+.snapchat{
+  background: linear-gradient(90deg, #8456EC 24.2%, #E87BF8 120.46%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+.create-event-btn{
+  background: linear-gradient(90deg, #8456EC 3.25%, #E87BF8 100%);
+  border-radius: 10px;
+  border:  0 ;
+  color : white;
+  padding: 16px;
+  padding-left: 12%;
+  padding-right: 12%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  cursor: pointer;
+}
