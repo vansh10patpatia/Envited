@@ -16,7 +16,7 @@ const Event = () => {
       <div className="event-page-container-wrap">
         <div className="event-page-container-details">
           <h1>Birthday Bash</h1>
-          <p>Hosted by Elysia</p>
+          <p>Hosted by {state?.eventHost ?? 'Elysia'}</p>
           <div className="event-page-container-details-card">
             <div className="event-page-container-details-card-img">
               <img src={Calendar} />
