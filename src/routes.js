@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Routes, Route,Navigate, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Event from "./pages/Event";
+import Create from "./pages/Event/Create";
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     path: "/event",
     exact   : true,
     element : <Event />,
+  },
+  {
+    path : "/create",
+    exact : true,
+    element : <Create />,
   }
 ]
 

@@ -20,7 +20,7 @@ code {
 
 /* Home Page Css */
 
-.home-page-container,.event-page-container{
+.home-page-container,.event-page-container,.create-event-wrapper{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -126,4 +126,56 @@ code {
 
 .sub-detail-info{
   font-size: 0.8rem !important;
+}
+
+/* Create Event */
+
+.card-image img{
+  width: 500px;
+}
+
+.create-event-wrapper{
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.create-card{
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 50px;
+  background-color: white;
+}
+
+.card-text h2{
+  font-size:  2.5rem;
+  color: #240D57;
+}
+
+.card-text p{
+  font-size: 1.2rem;
+  color: #240D57;
+  font-weight: 300;
+  width: 80%;
+}
+
+.input-container ,.start-date,.end-date,.inputs{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container input{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.input-container label{
+  font-size: 0.75rem;
+  color: #240D57;
+  font-weight: 300;
 }
