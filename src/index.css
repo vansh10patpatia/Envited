@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F6F2FF;
 }
 
 code {
@@ -17,8 +18,9 @@ code {
   font-style: normal;
 }
 
+/* Home Page Css */
 
-.home-page-container{
+.home-page-container,.event-page-container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,12 +29,13 @@ code {
   /* background-color: #DDDDDD; */
 }
 
+
 .text-container{
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: end;
-  flex: 0.5;
+  flex: 0.55;
 }
 
 .text-container  h2{
@@ -68,4 +71,59 @@ code {
   font-size: 20px;
   line-height: 23px;
   cursor: pointer;
+}
+
+/* Event Page Css */
+
+.event-page-container{
+  justify-content: space-evenly;
+  margin-top: 10%;
+}
+
+.event-text-cont,.event-image-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.event-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.event-details-cont{
+  margin-top: 15%;
+}
+
+.event-details-cont img{
+  width: 60px;
+}
+
+.sub-info{
+  margin-left: 20px;
+}
+
+.sub-info span{
+
+  font-weight: 700;
+  font-size: 18px;
+  color: #240D57;
+}
+
+.text-details h2{
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 10px;
+}
+
+.arrow-img img{
+  width : 10px;
+  position: relative;
+  top: 25px;
+  left: 50px;
+}
+
+.sub-detail-info{
+  font-size: 0.8rem !important;
 }
